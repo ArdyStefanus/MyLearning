@@ -32,7 +32,7 @@ class HomeTabBarController: UITabBarController {
         self.tabBar.tintColor = #colorLiteral(red: 0.9179999828, green: 0.125, blue: 0.2119999975, alpha: 1)
         
         self.viewControllers = [
-            createNavController(for: TabGimListController(), tabbarItem: tabHomeItem),
+            createNavController(for: TabListGimVC(), tabbarItem: tabHomeItem),
         ]
         
     }
