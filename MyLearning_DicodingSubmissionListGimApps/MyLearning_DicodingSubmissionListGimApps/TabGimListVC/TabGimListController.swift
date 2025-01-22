@@ -8,10 +8,10 @@
 import UIKit
 
 class TabListGimVC: UIViewController {
-
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var tableViewListGame: UITableView!
-
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     let vm = TabGimListVM()
     
     override func viewDidLoad() {

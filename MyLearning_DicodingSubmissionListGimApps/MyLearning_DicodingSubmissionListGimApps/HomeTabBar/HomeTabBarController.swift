@@ -11,8 +11,7 @@ class HomeTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,15 +27,16 @@ class HomeTabBarController: UITabBarController {
         }
         
         let tabHomeItem = UITabBarItem(title: "Beranda", image: #imageLiteral(resourceName: "tabbar beranda"), selectedImage: #imageLiteral(resourceName: "tabbar beranda selected"))
-        
+        let tabAkunFavorit = UITabBarItem(title: "Favorit", image: #imageLiteral(resourceName: "tabbar favorite"), selectedImage: #imageLiteral(resourceName: "tabbar favorite selected"))
+        let tabAkunItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "tabbar akun"), selectedImage: #imageLiteral(resourceName: "tabbar akun selected"))
         self.tabBar.tintColor = #colorLiteral(red: 0.9179999828, green: 0.125, blue: 0.2119999975, alpha: 1)
         
         self.viewControllers = [
             createNavController(for: TabListGimVC(), tabbarItem: tabHomeItem),
+            createNavController(for: TabFavoritVC(), tabbarItem: tabAkunFavorit),
+            createNavController(for: TabAkunVC(), tabbarItem: tabAkunItem)
         ]
-        
     }
-    
     
     fileprivate func createNavController(for rootViewController: UIViewController, tabbarItem: UITabBarItem) -> UIViewController {
         // if want to change the view become root in the future, use below
@@ -45,5 +45,4 @@ class HomeTabBarController: UITabBarController {
         navController.tabBarItem = tabbarItem
         return navController
     }
-    
 }
