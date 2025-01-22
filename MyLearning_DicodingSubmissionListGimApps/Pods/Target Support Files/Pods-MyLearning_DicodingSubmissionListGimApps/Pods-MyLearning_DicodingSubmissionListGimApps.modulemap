@@ -1,0 +1,6 @@
+framework module Pods_MyLearning_DicodingSubmissionListGimApps {
+  umbrella header "Pods-MyLearning_DicodingSubmissionListGimApps-umbrella.h"
+
+  export *
+  module * { export * }
+}
